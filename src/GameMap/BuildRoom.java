@@ -17,9 +17,6 @@ public class BuildRoom {
 	}
 	public void showRoom() {
 		System.out.println(room);
-		for(String str : room){
-			getRoomExit(str);
-		}
 	}
 	public void setRoom(String broom){
 		this.room.add(broom);
@@ -38,9 +35,9 @@ public class BuildRoom {
 		RoomExit nrm = roomInfo.get(nextroom);
 		orm.setExit(dir,nrm);
 	}
-	public void getRoomExit(String oriroom){
+	public String getRoomExit(String oriroom){
 		RoomExit orm = roomInfo.get(oriroom);
-		System.out.println(orm.getExit());
+		return orm.getExit();
 	}
 	public static void main(String[] args) {
 		
